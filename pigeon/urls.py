@@ -20,7 +20,7 @@ from django.urls import path, include
 from accounts.views import register
 
 urlpatterns = [
-    path("", include("app.urls")),
+    path("", include("core.urls")),
     path("register/", register, name="register"),
     path("admin/", admin.site.urls),
 ]

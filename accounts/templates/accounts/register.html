@@ -1,0 +1,22 @@
+<h2>Register</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    
+    <div id="student-fields" style="display:none;">
+        {{ student_profile_form.as_p }}
+    </div>
+    <div id="employer-fields" style="display:none;">
+        {{ employer_profile_form.as_p }}
+    </div>
+
+    <button type="submit">Register</button>
+</form>
+
+<script>
+    document.getElementById('id_user_type').addEventListener('change', function() {
+        var selectedValue = this.value;
+        document.getElementById('student-fields').style.display = (selectedValue === 'student') ? 'block' : 'none';
+        document.getElementById('employer-fields').style.display = (selectedValue === 'employer') ? 'block' : 'none';
+    });
+</script>

@@ -1,5 +1,5 @@
 from django import forms
-from .models import User, StudentProfile, EmployerProfile
+from core.models import User, StudentProfile, EmployerProfile
 
 class UserRegistrationForm(forms.ModelForm):
     class Meta:

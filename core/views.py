@@ -39,3 +39,7 @@ def register(request):
         'student_profile_form': student_profile_form,
         'employer_profile_form': employer_profile_form,
     })
+
+
+def login(request):
+    return render(request, 'core/login.html')

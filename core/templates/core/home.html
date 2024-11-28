@@ -15,6 +15,10 @@
           "Source Han Sans CN", sans-serif;
       }
 
+      a {
+        text-decoration: none;
+      }
+
       .main-container {
         overflow: hidden;
       }
@@ -201,6 +205,7 @@
         position: relative;
         width: 191px;
         z-index: 14;
+        text-decoration: none;
       }
       .secondary-small {
         display: flex;
@@ -217,6 +222,7 @@
         border: 1px solid #000000;
         z-index: 15;
         box-sizing: content-box;
+        text-decoration: none;
       }
       .button {
         flex-shrink: 0;
@@ -247,7 +253,10 @@
         border: 1px solid #000000;
         z-index: 17;
         box-sizing: content-box;
+        text-decoration: none;
       }
+
+
       .button-5 {
         flex-shrink: 0;
         flex-basis: auto;
@@ -262,6 +271,13 @@
         white-space: nowrap;
         z-index: 18;
       }
+
+      a.primary-small.button-5 .button {
+        background-color: #000000;
+        color: #ffffff;
+        border: 1px solid #000000;
+      }
+      
       .line {
         flex-shrink: 0;
         position: relative;
@@ -370,6 +386,8 @@
         border: 1px solid #ffffff;
         z-index: 26;
         box-sizing: content-box;
+        text-decoration: none;
+
       }
       .get-started {
         flex-shrink: 0;
@@ -394,12 +412,19 @@
         gap: 8px;
         position: relative;
         width: 129px;
+        height: 50px;
         padding: 12px 24px 12px 24px;
         cursor: pointer;
         background: transparent;
         border: 1px solid #ffffff;
         z-index: 28;
         box-sizing: content-box;
+      }
+
+      .button-a .button {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
       }
       .learn-more {
         flex-shrink: 0;
@@ -1131,6 +1156,7 @@
         gap: 8px;
         position: relative;
         width: 129px;
+        height: 50px;
         padding: 12px 24px 12px 24px;
         cursor: pointer;
         background: transparent;
@@ -1398,11 +1424,12 @@
               </div>
             </div>
             <div class="actions">
-              <button class="secondary-small">
-                <span class="button">Login</span></button
-              ><button class="primary-small">
-                <span class="button-5">Sign Up</span>
-              </button>
+              <a href="{% url 'login' %}" class="secondary-small  button">
+                <span class="button">Login</span></button>
+            </a>
+            <a href="{% url 'register' %}" class="primary-small  button-5">
+              <span class="button">Register</span></button>
+            </a>
             </div>
           </div>
           <div class="line"></div>
@@ -1419,11 +1446,16 @@
               >
             </div>
             <div class="actions-8">
-              <button class="button-9">
-                <span class="get-started">Get Started</span></button
-              ><button class="button-a">
-                <span class="learn-more">Learn More</span>
+              <a href="{% url 'register' %}" class="button-9">
+                <button class="button-9">
+                    <span class="get-started">Get Started</span>
+                </button>
+              </a>
+            <a href="{% url 'register' %}">
+              <button class="button-a">
+                  <span class="button">Learn More</span>
               </button>
+            </a>
             </div>
           </div>
         </div>
@@ -1448,13 +1480,19 @@
                 future.</span
               >
               <div class="actions-e">
-                <button class="button-f">
-                  <span class="get-started-10">Get Started</span>
-                </button>
+                <a href="{% url 'register' %}" class="">
+                  <button class="button-f">
+                      <span class="get-started-10">Get Started</span>
+                  </button>
+              </a>
+              <a href="{% url 'register' %}" class="button-11">
                 <div class="button-11">
-                  <span class="learn-more-12">Learn More</span>
-                  <div class="icon-chevron-right"><div class="icon"></div></div>
+                    <span class="learn-more-12">Learn More</span>
+                    <div class="icon-chevron-right">
+                        <div class="icon"></div>
+                    </div>
                 </div>
+            </a>
               </div>
             </div>
           </div>
@@ -1505,12 +1543,20 @@
             </div>
           </div>
           <div class="actions-22">
-            <button class="button-23">
-              <span class="learn-more-24">Learn More</span></button
-            ><button class="button-25">
-              <span class="sign-up">Sign Up</span>
-              <div class="chevron-right"><div class="icon-26"></div></div>
-            </button>
+            <a href="{% url 'register' %}" class="">
+              <button class="button-23">
+                  <span class="learn-more-24">Learn More</span>
+              </button>
+          </a>
+              <a href="{% url 'register' %}" class="button-11">
+                <div class="button-11">
+                    <span class="learn-more-12">Sign Up</span>
+                    <div class="icon-chevron-right">
+                        <div class="icon"></div>
+                    </div>
+                </div>
+            </a>
+            
           </div>
         </div>
         <div class="cta">
@@ -1523,12 +1569,17 @@
               >
             </div>
             <div class="actions-29">
-              <button class="button-2a">
-                <span class="sign-up-2b">Sign Up</span></button
-              ><button class="button-2c">
-                <span class="learn-more-2d">Learn More</span>
-              </button>
-            </div>
+              <a href="{% url 'register' %}" class="button-2a">
+                  <button class="button-2a">
+                      <span class="sign-up-2b">Sign Up</span>
+                  </button>
+              </a>
+              <a href="{% url 'register' %}" class="">
+                  <button class="button-2c">
+                      <span class="learn-more-2d">Learn More</span>
+                  </button>
+              </a>
+          </div>
           </div>
         </div>
         <div class="footer">

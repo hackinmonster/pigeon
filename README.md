@@ -1,1 +1,1 @@
-# pigeon
+Pigeon is a career-building platform designed for students with little formal work experience. It's planned to include features such as a search engine for internships, student profile creation and viewing, an application tracker, and analytics for finding technical skills relevant to a particular field or industry. 

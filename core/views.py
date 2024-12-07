@@ -17,3 +17,6 @@ def employer_account(request):
 
 def login(request):
     return render(request, 'core/login.html')
+
+def homepage(request):
+    return render(request, 'core/homepage.html')

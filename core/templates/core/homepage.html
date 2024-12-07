@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homepage.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="home-page">
+      <main class="search-page">
+        <header class="navbar-full-view-full-access">
+          <div class="content">
+            <div class="content-inner">
+              <div class="frame-parent">
+                <div class="pigeon-high-resolution-logo-gr-parent">
+                  <img
+                    class="pigeon-high-resolution-logo-gr-icon"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/pigeonhighresolutionlogograyscaletransparent-2@2x.png' %}"
+                  />
+
+                  <div class="column-wrapper">
+                    <div class="column">
+                      <div class="link-text">Home Page</div>
+                      <div class="pigeon-all-rights">Features</div>
+                      <div class="link-text">Contact Us</div>
+                      <div class="link-text-parent">
+                        <div class="link-text">More Options</div>
+                        <img
+                          class="chevron-down-icon"
+                          alt=""
+                          src="{% static 'images/chevron-down.svg' %}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="frame-group">
+                  <div class="icon-bell-wrapper">
+                    <img
+                      class="icon-bell"
+                      loading="lazy"
+                      alt=""
+                      src="{% static 'images/icon--bell.svg' %}"
+                    />
+                  </div>
+                  <img
+                    class="avatar-image-icon"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/avatar-image@2x.png' %}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="line"></div>
+          </div>
+        </header>
+        <section class="frame-container">
+          <div class="frame-wrapper">
+            <div class="find-a-internship-that-suits-y-parent">
+              <div class="find-a-internship">
+                Find a internship that suits your interest & skills.
+              </div>
+              <form class="limited-search-with-filter">
+                <div class="input-fields">
+                  <div class="input-field">
+                    <img
+                      class="chevron-down-icon"
+                      alt=""
+                      src="{% static 'images/icon--search.svg' %}"
+                    />
+
+                    <input
+                      class="search-by-job"
+                      placeholder="Search by: Job tittle, Position, Keyword..."
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="devider"></div>
+                <div class="input-fields1">
+                  <div class="input-field1">
+                    <img
+                      class="chevron-down-icon"
+                      alt=""
+                      src="{% static 'images/icon--map.svg' %}"
+                    />
+
+                    <input
+                      class="city-state-or"
+                      placeholder="City, state or zip code"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="button-wrapper">
+                  <button class="button">
+                    <div class="primary">Find Job</div>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="suggestions-wrapper">
+            <div class="suggestions">
+              <div class="suggestion-categories">
+                <div class="suggestion">Suggestion:</div>
+              </div>
+              <div class="designer">Designer,</div>
+              <div class="programming">Programming,</div>
+              <div class="suggestion-categories1">
+                <div class="digital-marketing">Digital Marketing,</div>
+              </div>
+              <div class="programming">Video,</div>
+              <div class="suggestion-categories2">
+                <div class="animation">Animation.</div>
+              </div>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="tagline-wrapper">
+              <div class="tagline"></div>
+            </div>
+            <div class="heading-parent">
+              <b class="heading"
+                >How Pigeon Helps You Find the Right Internship.</b
+              >
+              <div class="stats-description-parent">
+                <div class="stats-description">
+                  Pigeon’s powerful search engine helps you find jobs and
+                  internships tailored to your skills and preferences. Once
+                  you’ve found a role, our smart match scoring system gives you
+                  a percentage based on how well the position aligns with your
+                  profile, making it easier to choose opportunities that are the
+                  best fit for you.
+                </div>
+                <div class="button1">
+                  <div class="button2">Learn More</div>
+                  <img
+                    class="chevron-down-icon"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/icon--chevronright.svg' %}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="stats1">
+              <div class="stat">
+                <b class="stat-titles">8,000,000+</b>
+                <div class="stat-values">
+                  <b class="text">Job Openings</b>
+                </div>
+              </div>
+              <div class="stat">
+                <b class="stat-titles">5,600,000+</b>
+                <div class="text-wrapper">
+                  <b class="text2">Hirings</b>
+                </div>
+              </div>
+              <div class="stat2">
+                <b class="stat-titles">250,000+</b>
+                <div class="text-container">
+                  <b class="text">New Jobs</b>
+                </div>
+              </div>
+            </div>
+            <i class="data-sourced-from"
+              >Data sourced from the Bureau of Labor Statistics (BLS). Figures
+              are approximate and updated periodically.</i
+            >
+          </div>
+        </section>
+      </main>
+      <footer class="footer-4">
+        <div class="footer-links-wrapper">
+          <div class="footer-links">
+            <div class="about-us">About Us</div>
+            <div class="about-us">Contact Support</div>
+            <div class="about-us">FAQs</div>
+            <div class="about-us">User Guide</div>
+          </div>
+        </div>
+        <div class="divider-parent">
+          <div class="divider"></div>
+          <div class="legal-info-wrapper">
+            <div class="legal-info">
+              <div class="pigeon-all-rights">
+                © 2024 Pigeon. All rights reserved.
+              </div>
+              <div class="privacy-policy">Privacy Policy</div>
+              <div class="privacy-policy">Terms of Use</div>
+              <div class="privacy-policy">Cookie Settings</div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="pigeon-high-resolution-logo-gr-icon1"
+          alt=""
+          src="{% static 'images/pigeonhighresolutionlogograyscaletransparent-2-1@2x.png' %}"
+        />
+      </footer>
+    </div>
+  </body>
+</html>

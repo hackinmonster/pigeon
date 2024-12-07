@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'landingpage.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="landing-page">
+      <header class="navbar-limited-view-user-is">
+        <div class="content">
+          <div class="navbar-container">
+            <div class="navbar-left">
+              <div class="logo-container">
+                <img
+                  class="pigeon-high-resolution-logo-gr-icon"
+                  loading="lazy"
+                  alt=""
+                  src="{% static 'images/pigeonhighresolutionlogograyscaletransparent-2@2x.png' %}"
+                />
+              </div>
+              <nav class="links-container">
+                <nav class="links">
+                  <div class="link-text">Home Page</div>
+                  <div class="text-suspendisse-varius">Features</div>
+                  <div class="link-text2">Contact Us</div>
+                  <div class="link-text3">More Options</div>
+                </nav>
+              </nav>
+              <div class="dropdown-container">
+                <img
+                  class="chevron-down-icon"
+                  loading="lazy"
+                  alt=""
+                  src="{% static 'images/chevron-down.svg' %}"
+                />
+              </div>
+              <div class="icon-button-container">
+                <button class="stylesecondary-smalltrue-a" onclick="location.href='{% url 'login' %}'">
+                  <div class="button">Login</div>
+                </button>
+              </div>
+              <div class="icon-button-container1">
+                <button class="styleprimary-smalltrue-alt" onclick="location.href='{% url 'register' %}'">
+                  <div class="button1">Sign Up</div>
+                </button>
+              </div>              
+            </div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </header>
+      <section class="header-5">
+        <div class="column">
+          <div class="content1">
+            <h1 class="medium-length-hero">
+              Unlock Your Future with Pigeon Today!
+            </h1>
+            <div class="lorem-ipsum-dolor">
+              Pigeon is your gateway to exciting internships and career
+              opportunities. Start exploring roles that match your skills and
+              ambitions.
+            </div>
+          </div>
+          <div class="actions">
+            <button class="button2">
+              <div class="button3">Get Started</div>
+            </button>
+            <button class="button4">
+              <div class="button5">Learn More</div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="layout-89">
+        <div class="content2">
+          <div class="column1">
+            <div class="tagline-wrapper">
+              <div class="tagline">Connect</div>
+            </div>
+            <h1 class="heading">Empowering Students to Find Their Future</h1>
+          </div>
+          <div class="column2">
+            <div class="text-suspendisse-varius">
+              Pigeon is designed to bridge the gap between students and
+              employers by providing tailored opportunities based on individual
+              skills. With features like skill matching, personalized profiles,
+              and a comprehensive directory of internships, users can easily
+              navigate their career paths. Join us in transforming the way
+              students connect with their future.
+            </div>
+            <div class="actions1">
+              <button class="button6">
+                <div class="button3">Get Started</div>
+              </button>
+              <div class="button8">
+                <div class="button9">Learn More</div>
+                <img
+                  class="icon-chevron-right"
+                  loading="lazy"
+                  alt=""
+                  src="{% static 'images/icon--chevronright.svg' %}"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="placeholder-image-icon"
+          loading="lazy"
+          alt=""
+          src="{% static 'images/placeholder-image@2x.png' %}"
+        />
+      </section>
+      <section class="layout-241">
+        <div class="section-title">
+          <div class="tagline-wrapper">
+            <div class="tagline1">Empower</div>
+          </div>
+          <div class="content3">
+            <h1 class="heading1">Unlock Your Future with Pigeon</h1>
+            <div class="lorem-ipsum-dolor">
+              Pigeon is designed to bridge the gap between students and their
+              dream opportunities. With our intuitive platform, you can easily
+              navigate your career path.
+            </div>
+          </div>
+        </div>
+        <div class="content4">
+          <div class="row">
+            <div class="column3">
+              <img
+                class="icon-relume"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--relume.svg' %}"
+              />
+
+              <h1 class="heading2">Connect Students with Real Opportunities</h1>
+              <div class="feature-descriptions">
+                Pigeon connects students with internships and job opportunities
+                tailored to their skills.
+              </div>
+            </div>
+            <div class="column3">
+              <img
+                class="icon-relume"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--relume.svg' %}"
+              />
+
+              <h1 class="heading2">Track Your Progress with Ease</h1>
+              <div class="feature-descriptions">
+                Monitor your growth and achievements as you advance in your
+                career journey.
+              </div>
+            </div>
+            <div class="column3">
+              <img
+                class="icon-relume"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--relume.svg' %}"
+              />
+
+              <h1 class="heading2">Skill Matching for Tailored Job Roles</h1>
+              <div class="feature-descriptions">
+                Our skill matcher aligns your abilities with the right roles in
+                the industry.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="actions2">
+          <button class="button6">
+            <div class="button3">Learn More</div>
+          </button>
+          <div class="button8">
+            <div class="button9">Sign Up</div>
+            <img
+              class="icon-chevron-right"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/icon--chevronright.svg' %}"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="cta-27">
+        <div class="content5">
+          <div class="content6">
+            <h1 class="heading1">Unlock Your Future with Pigeon</h1>
+            <div class="text2">
+              Join Pigeon today and discover exciting internship opportunities
+              tailored just for you!
+            </div>
+          </div>
+          <div class="actions">
+            <button class="button2">
+              <div class="button3">Sign Up</div>
+            </button>
+            <button class="button4">
+              <div class="button5">Learn More</div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="footer-4">
+        <div class="footer-content">
+          <div class="footer-links">
+            <div class="tagline">About Us</div>
+            <div class="tagline">Contact Support</div>
+            <div class="tagline">FAQs</div>
+            <div class="tagline">User Guide</div>
+          </div>
+          <img
+            class="pigeon-high-resolution-logo-gr-icon1"
+            loading="lazy"
+            alt=""
+            src="{% static 'images/pigeonhighresolutionlogograyscaletransparent-2@2x.png' %}"
+          />
+        </div>
+        <footer class="footer-bottom">
+          <div class="divider"></div>
+          <div class="copyright-container">
+            <div class="copyright">
+              <div class="text-suspendisse-varius">
+                © 2024 Pigeon. All rights reserved.
+              </div>
+              <div class="privacy-policy">Privacy Policy</div>
+              <div class="terms-of-use">Terms of Use</div>
+              <div class="terms-of-use">Cookie Settings</div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>

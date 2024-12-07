@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from .forms import UserRegistrationForm, StudentProfileForm, EmployerProfileForm
 from .models import User
 
-def home(request):
-    return render(request, 'core/home.html')
+def landingpage(request):
+    return render(request, 'core/landingpage.html')
 
 def register(request):
     return render(request, 'core/register.html')

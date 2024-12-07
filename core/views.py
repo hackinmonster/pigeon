@@ -20,3 +20,6 @@ def login(request):
 
 def homepage(request):
     return render(request, 'core/homepage.html')
+
+def searchpage(request):
+    return render(request, 'core/searchpage.html')

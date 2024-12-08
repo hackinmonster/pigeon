@@ -26,3 +26,6 @@ def searchpage(request):
 
 def student_profile(request):
     return render(request, 'core/student_profile.html')
+
+def edit_studentprofile(request):
+    return render(request, 'core/edit_studentprofile.html')

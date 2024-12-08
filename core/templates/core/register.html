@@ -84,13 +84,17 @@
     
     <div id="student-form" class="hidden">
       <h1>Student Account</h1>
-      <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" placeholder="" />
-      <label for="email">Email Address</label>
-      <input type="text" id="email" placeholder="" />
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="" />
-      <button>Register</button>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="account_type" value="student" /> <!-- Added hidden field -->
+        <label for="full_name">Full Name</label>
+        <input type="text" id="full_name" name="full_name" required/>
+        <label for="email">Email Address</label>
+        <input type="text" id="email" name="email" required/>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required/>
+        <button type="submit">Register</button>
+      </form>
       <div class="login-link">
         <p>Already on Pigeon? <a href="{% url 'login' %}">Login</a></p>
       </div>
@@ -98,13 +102,17 @@
     
     <div id="employer-form" class="hidden">
       <h1>Employer Account</h1>
-      <label for="companyName">Company Name</label>
-      <input type="text" id="companyName" placeholder="" />
-      <label for="companyEmail">Email Address</label>
-      <input type="text" id="companyEmail" placeholder="" />
-      <label for="companyPassword">Password</label>
-      <input type="password" id="companyPassword" placeholder="" />
-      <button>Register</button>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="account_type" value="employer" /> <!-- Added hidden field -->
+        <label for="company_name">Company Name</label>
+        <input type="text" id="company_name" name="company_name" required/>
+        <label for="company_email">Email Address</label>
+        <input type="text" id="company_email" name="company_email" required/>
+        <label for="company_password">Password</label>
+        <input type="password" id="company_password" name="company_password" required/>
+        <button type="submit">Register</button>
+      </form>
       <div class="login-link">
         <p>Already on Pigeon? <a href="{% url 'login' %}">Login</a></p>
       </div>

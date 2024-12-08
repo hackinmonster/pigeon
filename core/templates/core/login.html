@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Welcome Back!</title>
- <style>
-   body {
-     font-family: Arial, sans-serif;
-     background-color: #fff;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-     margin: 0;
-     color: #333;
-   }
+  <title>Welcome Back!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+    }
 
-   .login-container {
-     background-color: #fff;
-     padding: 20px;
-     border-radius: 5px;
-     width: 400px;
-   }
+    .login-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 400px;
+    }
 
-   h1 {
-     text-align: center;
-     margin-bottom: 20px;
-   }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-   label {
-     display: inline-block;
-     margin-bottom: 5px;
-   }
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
 
-   input[type=text], input[type=password] {
-     width: 100%;
-     padding: 12px 20px;
-     margin-bottom: 20px;
-     border: 1px solid #000000;
-     border-radius: 10px;
-     box-sizing: border-box;
-   }
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
 
-   button {
-     background-color: #333;
-     color: #fff;
-     padding: 14px 20px;
-     margin-bottom: 10px;
-     border: none;
-     border-radius: 10px;
-     cursor: pointer;
-     width: 100%;
-   }
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 14px 20px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
 
-   button:hover {
-     background-color: #444;
-   }
+    button:hover {
+      background-color: #444;
+    }
 
-   .remember-me {
-     display: flex;
-     align-items: center;
-     margin-bottom: 20px;
-   }
+    .remember-me {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-   .remember-me input[type=checkbox] {
-     margin-right: 5px;
-   }
+    .remember-me input[type=checkbox] {
+      margin-right: 5px;
+    }
 
-   .signup-link {
-     text-align: center;
-   }
- </style>
+    .signup-link {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
- <div class="login-container">
-   <h1>Welcome Back!</h1>
-   <label for="email">Email Address</label>
-   <input type="text" id="email" placeholder="" />
-   <label for="password">Password</label>
-   <input type="password" id="password" placeholder="" />
-   <div class="remember-me">
-     <input type="checkbox" id="remember-me" />
-     <label for="remember-me">Remember Me</label>
-   </div>
-   <button>Login</button>
-   <div class="signup-link">
-     <p>Don't have an account? <a href="{% url 'register' %}">Sign up</a></p>
-   </div>
- </div>
+  <div class="login-container">
+    <h1>Welcome Back!</h1>
+    <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %}
+      <label for="email">Email Address</label>
+      <input type="text" id="email" name="username" placeholder="Enter your email" required />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      <div class="remember-me">
+        <input type="checkbox" id="remember-me" name="remember_me" />
+        <label for="remember-me">Remember Me</label>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <div class="signup-link">
+      <p>Don't have an account? <a href="{% url 'register' %}">Sign up</a></p>
+    </div>
+  </div>
 </body>
 </html>

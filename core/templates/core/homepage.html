@@ -28,7 +28,7 @@
 
                   <div class="column-wrapper">
                     <div class="column">
-                      <div class="link-text">Home Page</div>
+                      <a href="{% url 'homepage' %}" class="link-text8" style="text-decoration: none; color: inherit;">Home Page</a>
                       <div class="pigeon-all-rights">Features</div>
                       <div class="link-text">Contact Us</div>
                       <div class="link-text-parent">
@@ -50,14 +50,16 @@
                       alt=""
                       src="{% static 'images/icon--bell.svg' %}"
                     />
+                    </div>
+                    <a href="{% if user.is_student %}{% url 'student_profile' %}{% elif user.is_employer %}{% url 'employer_profile' %}{% endif %}">
+                      <img
+                        class="avatar-image-icon"
+                        loading="lazy"
+                        alt="Profile Image"
+                        src="{% static 'images/avatar-image@2x.png' %}"
+                      />
+                    </a>
                   </div>
-                  <img
-                    class="avatar-image-icon"
-                    loading="lazy"
-                    alt=""
-                    src="{% static 'images/avatar-image@2x.png' %}"
-                  />
-                </div>
               </div>
             </div>
             <div class="line"></div>
@@ -69,40 +71,22 @@
               <div class="find-a-internship">
                 Find a internship that suits your interest & skills.
               </div>
-              <form class="limited-search-with-filter">
+              <form action="{% url 'searchpage' %}" method="get" class="limited-search-with-filter">
                 <div class="input-fields">
                   <div class="input-field">
-                    <img
-                      class="chevron-down-icon"
-                      alt=""
-                      src="{% static 'images/icon--search.svg' %}"
-                    />
-
-                    <input
-                      class="search-by-job"
-                      placeholder="Search by: Job tittle, Position, Keyword..."
-                      type="text"
-                    />
+                    <img class="chevron-down-icon" alt="" src="{% static 'images/icon--search.svg' %}" />
+                    <input class="search-by-job" name="job_title" placeholder="Search by: Job title, Position, Keyword..." type="text" />
                   </div>
                 </div>
                 <div class="devider"></div>
                 <div class="input-fields1">
                   <div class="input-field1">
-                    <img
-                      class="chevron-down-icon"
-                      alt=""
-                      src="{% static 'images/icon--map.svg' %}"
-                    />
-
-                    <input
-                      class="city-state-or"
-                      placeholder="City, state or zip code"
-                      type="text"
-                    />
+                    <img class="chevron-down-icon" alt="" src="{% static 'images/icon--map.svg' %}" />
+                    <input class="city-state-or" name="location" placeholder="City, state or zip code" type="text" />
                   </div>
                 </div>
                 <div class="button-wrapper">
-                  <button class="button">
+                  <button class="button" type="submit">
                     <div class="primary">Find Job</div>
                   </button>
                 </div>

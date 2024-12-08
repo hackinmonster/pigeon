@@ -5,6 +5,15 @@ body {
   line-height: normal;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
+.button-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   /* fonts */
   --text-regular-normal: Roboto;

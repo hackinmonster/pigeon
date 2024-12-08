@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'student_profile.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="student-profile1">
+      <main class="profile">
+        <header class="navbar-full-view-full-access">
+          <div class="content">
+            <div class="content-inner">
+              <div class="frame-parent">
+                <div class="pigeon-high-resolution-logo-gr-parent">
+                  <img
+                    class="pigeon-high-resolution-logo-gr-icon"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/pigeonhighresolutionlogograyscaletransparent-2@2x.png' %}"
+                  />
+
+                  <div class="column-wrapper">
+                    <div class="column">
+                      <div class="link-text">Home Page</div>
+                      <div class="pigeon-all-rights">Features</div>
+                      <div class="link-text2">Contact Us</div>
+                      <div class="link-item">
+                        <div class="link-text3">More Options</div>
+                        <img
+                          class="chevron-down-icon"
+                          alt=""
+                          src="{% static 'images/chevron-down.svg' %}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="user-actions">
+                  <div class="icon-bell-wrapper">
+                    <img
+                      class="icon-bell"
+                      loading="lazy"
+                      alt=""
+                      src="{% static 'images/icon--bell.svg' %}"
+                    />
+                  </div>
+                  <img
+                    class="avatar-image-icon"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/avatar-image@2x.png' %}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="content-divider"></div>
+          </div>
+        </header>
+        <section class="about-me-with-banner-wrapper">
+          <div class="about-me-with-banner">
+            <img
+              class="placeholder-image-icon"
+              alt=""
+              src="{% static 'images/blank.png' %}"
+            />
+
+            <div class="page-header-description">
+              <img class="profile-icon" alt="" src="{% static 'images/profile@2x.png' %}" />
+
+              <div class="column1">
+                <div class="breadcrumbs">
+                  <div class="tag">
+                    <div class="text">Student</div>
+                  </div>
+                </div>
+                <div class="content1">
+                  <div class="avatar-content">
+                    <b class="text1">John Doe</b>
+                    <div class="text2">johndoe@gmail.com</div>
+                  </div>
+                  <div class="column2">
+                    <div class="actions">
+                      <button class="button">
+                        <div class="button1">Edit</div>
+                      </button>
+                      <button class="upload">
+                        <img
+                          class="chevron-down-icon"
+                          alt=""
+                          src="{% static 'images/icon--upload.svg' %}"
+                        />
+
+                        <div class="upload-resume">Upload Resume</div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="icon" loading="lazy" alt="" src="{% static 'images/icon.svg' %}" />
+            </div>
+          </div>
+        </section>
+        <div class="job-listings">
+          <div class="job-cards">
+            <div class="card">
+              <div class="content2">
+                <div class="job">
+                  <div class="job-title">
+                    <b class="heading">About</b>
+                  </div>
+                  <div class="text3">
+                    I’m a UX designer with a passion for creating intuitive and
+                    user-centered digital experiences. I thrive on combining
+                    research, creativity, and strategy to solve complex design
+                    problems and deliver meaningful solutions. Proficient in
+                    tools like Figma and Adobe XD, I focus on crafting
+                    interfaces that are both functional and visually engaging.
+                    When I’m not designing, I enjoy exploring new trends in
+                    design and finding inspiration in everyday interactions.
+                  </div>
+                </div>
+              </div>
+              <div class="actions1"></div>
+            </div>
+            <div class="card-wrapper">
+              <div class="card1">
+                <div class="content3">
+                  <div class="job">
+                    <div class="job-title">
+                      <b class="heading">Experience</b>
+                    </div>
+                    <div class="text2">
+                      List past roles, responsibilities, and achievements to
+                      highlight professional expertise.
+                    </div>
+                  </div>
+                </div>
+                <div class="actions2">
+                  <div class="button2">
+                    <div class="button3">Add experience</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-container">
+              <div class="card1">
+                <div class="content3">
+                  <div class="job2">
+                    <div class="job-title">
+                      <b class="heading">Education</b>
+                    </div>
+                    <div class="text2">
+                      Add degrees, certifications, and academic highlights to
+                      showcase your qualifications.
+                    </div>
+                  </div>
+                </div>
+                <div class="actions3">
+                  <div class="button2">
+                    <div class="button3">Add education</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card3">
+              <div class="content3">
+                <div class="job2">
+                  <div class="job-title">
+                    <b class="heading">Skills</b>
+                  </div>
+                  <div class="text2">
+                    <p class="highlight-key-technical">
+                      Highlight key technical and personal skills relevant to
+                      your career goals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button class="actions4">
+                <div class="button2">
+                  <div class="button7">Add skills</div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-top">
+              <div class="footer-branding">
+                <div class="footer-links">
+                  <div class="text">About Us</div>
+                  <div class="text">Contact Support</div>
+                  <div class="faqs">FAQs</div>
+                  <div class="user-guide">User Guide</div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <img
+                class="pigeon-high-resolution-logo-gr-icon1"
+                alt=""
+                src="{% static 'images/pigeonhighresolutionlogograyscaletransparent-2-1@2x.png' %}"
+              />
+            </div>
+            <div class="legal-links-wrapper">
+              <div class="legal-links">
+                <div class="pigeon-all-rights">
+                  © 2024 Pigeon. All rights reserved.
+                </div>
+                <div class="privacy-policy">Privacy Policy</div>
+                <div class="privacy-policy">Terms of Use</div>
+                <div class="cookie-settings">Cookie Settings</div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

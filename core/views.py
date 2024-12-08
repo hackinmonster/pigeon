@@ -23,3 +23,6 @@ def homepage(request):
 
 def searchpage(request):
     return render(request, 'core/searchpage.html')
+
+def student_profile(request):
+    return render(request, 'core/student_profile.html')

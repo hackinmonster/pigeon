@@ -28,17 +28,14 @@
 
                   <div class="column-wrapper">
                     <div class="column">
-                      <a href="{% url 'homepage' %}" class="link-text8" style="text-decoration: none; color: inherit;">Home Page</a>
-                      <div class="pigeon-all-rights">Features</div>
-                      <div class="link-text">Contact Us</div>
-                      <div class="link-text-parent">
-                        <div class="link-text">More Options</div>
-                        <img
-                          class="chevron-down-icon"
-                          alt=""
-                          src="{% static 'images/chevron-down.svg' %}"
-                        />
-                      </div>
+                      <a href="{% url 'homepage' %}" class="link-text8" style="text-decoration: none; color: inherit;">Home</a>
+                      {% if profile_url == 'employer_profile' %}
+                      <div class="column">
+                        <a href="{% url 'employer_application_view' %}" class= "link-button" style="text-decoration: none; color: inherit;" >View Applications</a>
+                        <a href="{% url 'edit_job_postings' %}" class="link-button" style="text-decoration: none; color: inherit;">View Job Postings</a>
+                    </div>
+                      {% endif %}
+
                     </div>
                   </div>
                 </div>

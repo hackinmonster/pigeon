@@ -32,7 +32,7 @@
                 </div>
                 <nav class="navbar-links-wrapper">
                   <nav class="navbar-links">
-                    <div class="link-text8">Home Page</div>
+                    <a href="{% url 'homepage' %}" class="link-text8" style="text-decoration: none; color: inherit;">Home Page</a>
                     <div class="link-text9">Features</div>
                     <div class="link-text10">Contact Us</div>
                     <div class="link-text11">More Options</div>
@@ -54,12 +54,14 @@
                     src="{% static 'images/icon--bell1.svg' %}"
                   />
                 </div>
-                <img
-                  class="avatar-image-icon8"
-                  loading="lazy"
-                  alt=""
-                  src="{% static 'images/avatar-image1@2x.png' %}"
-                />
+                <a href="{% if user.is_student %}{% url 'student_profile' %}{% elif user.is_employer %}{% url 'employer_profile' %}{% endif %}">
+                  <img
+                    class="avatar-image-icon14"
+                    loading="lazy"
+                    alt="Profile Image"
+                    src="{% static 'images/avatar-image@2x.png' %}"
+                  />
+                </a>
               </div>
             </div>
             <div class="navbar-divider"></div>
@@ -67,7 +69,7 @@
         </header>
         <section class="search-page-child">
           <div class="search-with-filter-group">
-            <form class="search-with-filter1">
+            <form class="search-with-filter1" method="GET" action="{% url 'searchpage' %}">
               <div class="input-field-frame">
                 <div class="input-field4">
                   <img
@@ -75,11 +77,13 @@
                     alt=""
                     src="{% static 'images/icon--search1.svg' %}"
                   />
-
+            
                   <input
                     class="search-by-job2"
-                    placeholder="Search by: Job tittle, Position, Keyword..."
+                    placeholder="Search by: Job title, Position, Keyword..."
                     type="text"
+                    name="job_title"
+                    value="{{ job_title }}"
                   />
                 </div>
               </div>
@@ -92,11 +96,13 @@
                       alt=""
                       src="{% static 'images/icon--map1.svg' %}"
                     />
-
+            
                     <input
                       class="city-state-or2"
                       placeholder="City, state or zip code"
                       type="text"
+                      name="location"
+                      value="{{ location }}"
                     />
                   </div>
                   <img
@@ -107,22 +113,22 @@
                 </div>
               </div>
               <div class="button-wrapper1">
-                <button class="button7">
+                <button type="submit" class="button7">
                   <img
                     class="icon-slider-alt1"
                     alt=""
                     src="{% static 'images/icon--slideralt@2x.png' %}"
                   />
-
                   <div class="filters1">Filters</div>
                 </button>
               </div>
               <div class="button-wrapper1">
-                <button class="button8">
+                <button type="submit" class="button8">
                   <div class="primary2">Find Job</div>
                 </button>
               </div>
             </form>
+            
             <div class="application-shell-151">
               <div class="sidebar-11">
                 <div class="menu-top1">
@@ -407,9 +413,11 @@
               <button class="stylesecondary-smalltrue-a1">
                 <div class="button9">Save</div>
               </button>
-              <button class="button10">
-                <div class="apply1">Apply</div>
-              </button>
+              <a href="/apply">
+                <button class="button10">
+                  <div class="apply1">Apply</div>
+                </button>
+              </a>
               <div class="header-group">
                 <div class="header1">
                   <img

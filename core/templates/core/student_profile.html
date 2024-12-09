@@ -28,7 +28,7 @@
 
                   <div class="column-wrapper">
                     <div class="column">
-                      <div class="link-text">Home Page</div>
+                      <a href="{% url 'homepage' %}" class="link-text8" style="text-decoration: none; color: inherit;">Home Page</a>
                       <div class="pigeon-all-rights">Features</div>
                       <div class="link-text2">Contact Us</div>
                       <div class="link-item">
@@ -51,12 +51,14 @@
                       src="{% static 'images/icon--bell.svg' %}"
                     />
                   </div>
-                  <img
-                    class="avatar-image-icon"
-                    loading="lazy"
-                    alt=""
-                    src="{% static 'images/avatar-image@2x.png' %}"
-                  />
+                  <a href="{% if user.is_student %}{% url 'student_profile' %}{% elif user.is_employer %}{% url 'employer_profile' %}{% endif %}">
+                    <img
+                      class="avatar-image-icon"
+                      loading="lazy"
+                      alt="Profile Image"
+                      src="{% static 'images/avatar-image@2x.png' %}"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -87,9 +89,11 @@
                   </div>
                   <div class="column2">
                     <div class="actions">
-                      <button class="button">
-                        <div class="button1">Edit</div>
-                      </button>
+                      <a href="{% url 'edit_profile' %}" style="text-decoration: none;">
+                        <button class="button">
+                          <div class="button1">Edit</div>
+                        </button>
+                      </a>
                       <button class="upload">
                         <img
                           class="chevron-down-icon"

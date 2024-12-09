@@ -28,7 +28,7 @@
 
                   <div class="column-wrapper">
                     <div class="column">
-                      <div class="link-text">Home Page</div>
+                      <a href="{% url 'homepage' %}" class="link-text8" style="text-decoration: none; color: inherit;">Home Page</a>
                       <div class="pigeon-all-rights">Features</div>
                       <div class="link-text2">Contact Us</div>
                       <div class="link-item">
@@ -51,12 +51,14 @@
                       src="{% static 'images/icon--bell.svg' %}"
                     />
                   </div>
-                  <img
-                    class="avatar-image-icon"
-                    loading="lazy"
-                    alt=""
-                    src="{% static 'images/avatar-image@2x.png' %}"
-                  />
+                  <a href="{% if user.is_student %}{% url 'student_profile' %}{% elif user.is_employer %}{% url 'employer_profile' %}{% endif %}">
+                    <img
+                      class="avatar-image-icon"
+                      loading="lazy"
+                      alt="Profile Image"
+                      src="{% static 'images/avatar-image@2x.png' %}"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -82,14 +84,16 @@
                 </div>
                 <div class="content1">
                   <div class="avatar-content">
-                    <b class="text1">Robert Smith</b>
-                    <div class="text2">robertsmith@gmail.com</div>
+                    <b class="text1">Tech Solutions Inc</b>
+                    <div class="text2">techsolutionsinc@gmail.com</div>
                   </div>
                   <div class="column2">
                     <div class="actions">
-                      <button class="button">
-                        <div class="button1">Edit</div>
-                      </button>
+                      <a href="{% url 'edit_profile' %}" style="text-decoration: none;">
+                        <button class="button">
+                          <div class="button1">Edit</div>
+                        </button>
+                      </a>
                       <button class="upload">
                         <img
                           class="chevron-down-icon"
@@ -116,78 +120,13 @@
                     <b class="heading">About</b>
                   </div>
                   <div class="text3">
-                    I’m a UX designer with a passion for creating intuitive and
-                    user-centered digital experiences. I thrive on combining
-                    research, creativity, and strategy to solve complex design
-                    problems and deliver meaningful solutions. Proficient in
-                    tools like Figma and Adobe XD, I focus on crafting
-                    interfaces that are both functional and visually engaging.
-                    When I’m not designing, I enjoy exploring new trends in
-                    design and finding inspiration in everyday interactions.
+                    At Tech Solutions Inc., based in San Francisco, California, we specialize in software development and AI-powered tools. Our team is dedicated to delivering innovative, customer-focused solutions that help businesses thrive in a rapidly changing world.
+
+We foster a collaborative environment where creativity drives success, offering high-quality products that make a real difference for our clients. Join us at Tech Solutions Inc., where we’re shaping the future of technology.
                   </div>
                 </div>
               </div>
               <div class="actions1"></div>
-            </div>
-            <div class="card-wrapper">
-              <div class="card1">
-                <div class="content3">
-                  <div class="job">
-                    <div class="job-title">
-                      <b class="heading">Experience</b>
-                    </div>
-                    <div class="text2">
-                      List past roles, responsibilities, and achievements to
-                      highlight professional expertise.
-                    </div>
-                  </div>
-                </div>
-                <div class="actions2">
-                  <div class="button2">
-                    <div class="button3">Add experience</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-container">
-              <div class="card1">
-                <div class="content3">
-                  <div class="job2">
-                    <div class="job-title">
-                      <b class="heading">Education</b>
-                    </div>
-                    <div class="text2">
-                      Add degrees, certifications, and academic highlights to
-                      showcase your qualifications.
-                    </div>
-                  </div>
-                </div>
-                <div class="actions3">
-                  <div class="button2">
-                    <div class="button3">Add education</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card3">
-              <div class="content3">
-                <div class="job2">
-                  <div class="job-title">
-                    <b class="heading">Skills</b>
-                  </div>
-                  <div class="text2">
-                    <p class="highlight-key-technical">
-                      Highlight key technical and personal skills relevant to
-                      your career goals.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <button class="actions4">
-                <div class="button2">
-                  <div class="button7">Add skills</div>
-                </div>
-              </button>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import login as auth_login
 from django.contrib import messages
 from .forms import StudentProfileForm, EmployerProfileForm, CustomAuthenticationForm
-from .models import User
+from .models import User, StudentProfile, EmployerProfile
 
 def landingpage(request):
     return render(request, 'core/landingpage.html')
@@ -81,10 +81,26 @@ def user_login(request):  # Renamed view function to avoid conflict
         return render(request, 'core/login.html', {'form': form})
 
 def homepage(request):
-    return render(request, 'core/homepage.html')
+    user = request.user
+    if user.is_student():
+        profile_url = 'student_profile'
+    elif user.is_employer():
+        profile_url = 'employer_profile'
+    else:
+        profile_url = None
 
-def searchpage(request):
-    return render(request, 'core/searchpage.html')
+    return render(request, 'core/homepage.html', {
+        'profile_url': profile_url,
+    })
+
+def search_page(request):
+    job_title = request.GET.get('job_title', '')
+    location = request.GET.get('location', '')
+
+    return render(request, 'core/searchpage.html', {
+        'job_title': job_title,
+        'location': location,
+    })
 
 def student_profile(request):
     return render(request, 'core/student_profile.html')
@@ -97,3 +113,6 @@ def employer_profile(request):
 
 def apply(request):
     return render(request, 'core/apply.html')
+
+def employer_application_view(request):
+    return render(request, 'core/employer_application_view.html')

@@ -94,3 +94,6 @@ def edit_profile(request):
 
 def employer_profile(request):
     return render(request, 'core/employer_profile.html')
+
+def apply(request):
+    return render(request, 'core/apply.html')

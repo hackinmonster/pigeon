@@ -1,36 +1,20 @@
-Pigeon is a career-building platform designed for students with little formal work experience. It's planned to include features such as a search engine for internships, student profile creation and viewing, an application tracker, and analytics for finding technical skills relevant to a particular field or industry. 
+Pigeon is a career development platform tailored for students with limited formal work experience. It aims to empower users with features like an internship search engine, customizable student profiles, an application tracker, and data-driven analytics to identify key technical skills required in various fields and industries.
 
-Software:
-  Visual Studio Code (VSCode): 
-    Primary code editor for HTML, CSS, and Python.
-    Extensions for syntax highlighting, debugging, and Git integration.
   
-  Django Framework: 
-    To build the backend of the Pigeon application.
-  
-  Python:
-    Backend programming language for server-side logic, database interactions, and application functionality.
-    Required libraries may include Flask/Django for web development, SQLAlchemy for database management, and others depending on the project's scope.
-  
-  Web Development Stack:
-    HTML/CSS for frontend development.
-    JavaScript (optional for dynamic elements or advanced interactivity).
+- **Django**: Web framework for building the backend of the Pigeon application, handling routing, authentication, and business logic.
+
+
+- **Python**: Primary backend language for server-side logic, data processing, and application functionality. Uses Django for web development and SQLAlchemy for ORM-based database management.
+
+
+- **Frontend Stack**: HTML/CSS for structuring and styling the user interface.
 
 Installation Guide:
 
-  Requirements:Laptop, Stable internet connection, and virtual enviroment (we suggest VisualStudio Code).
-
-  Open a new terminal and run the folling command:
+  In your command-line interface, navigate to directory called pigeon (manage.py should be present inside)
 
     Windows: python manage.py runserver
 
     MacOS: python3 manage.py runserver
 
-  Ater this is don you should recive an output of the following: 
-    System check identified 1 issue (0 silenced).
-    December 09, 2024 - 04:30:10
-    Django version 5.1.2, using settings 'pigeon.settings'
-    Starting development server at http://127.0.0.1:8000/
-    Quit the server with CONTROL-C.
-
-  Finally simply click on the link to the server in the output.
+  Finally, simply click on the link to view the webpage locally.
